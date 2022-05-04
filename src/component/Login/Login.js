@@ -34,12 +34,15 @@ const Login = () => {
       <div className="mx-auto d-block text-center border w-50 rounded shadow-sm">
         <div className="mb-2 p-3">
           {" "}
-          <button className="btn w-100 border">Sign in with oogle</button>
+          <button className="btn w-100 border">Sign in with Google</button>
         </div>
         <p>
           New User ?
           <Link to="/signup">
-            <button className="btn btn-secondary rounded ms-2"> Sign Up</button>
+            <button className="btn btn-secondary rounded ms-2">
+              {" "}
+              Register Here
+            </button>
           </Link>
         </p>
       </div>
