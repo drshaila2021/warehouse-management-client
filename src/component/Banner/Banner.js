@@ -1,0 +1,12 @@
+import React from "react";
+import banner from "../../../src/images/banner-6.jpg";
+
+const Banner = () => {
+  return (
+    <div>
+      <img src={banner} alt="" />
+    </div>
+  );
+};
+
+export default Banner;
