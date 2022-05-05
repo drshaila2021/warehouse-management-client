@@ -5,6 +5,8 @@ import Home from "./component/Home/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./component/Login/Login";
 import Register from "./component/Register/Register";
+import InventoryDetail from "./component/InventoryDetail/InventoryDetail";
+import ManageInventory from "./component/ManageInventory/ManageInventory";
 
 function App() {
   return (
@@ -14,6 +16,14 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route
+          path="/inventory/:id"
+          element={<InventoryDetail></InventoryDetail>}
+        ></Route>
+        <Route
+          path="/manageinventory"
+          element={<ManageInventory></ManageInventory>}
+        ></Route>
       </Routes>
     </div>
   );
