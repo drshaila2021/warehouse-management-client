@@ -8,7 +8,6 @@ const Inventories = () => {
       .then((res) => res.json())
       .then((data) => {
         setInventories(data);
-        console.log(data);
       });
   }, []);
   return (
