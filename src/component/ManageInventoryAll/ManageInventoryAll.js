@@ -3,6 +3,7 @@ import React from "react";
 const ManageInventoryAll = (props) => {
   const { _id, picture, name, price, quantity, itemSold, supplierName } =
     props.inventory;
+  const { handleDeleteItem } = props;
   return (
     <tr>
       <td>{_id}</td>
@@ -20,7 +21,12 @@ const ManageInventoryAll = (props) => {
       <td>{itemSold}</td>
       <td>{supplierName}</td>
       <td>
-        <button className="btn btn-secondary">Delete</button>
+        <button
+          className="btn btn-secondary"
+          onClick={() => handleDeleteItem(_id)}
+        >
+          Delete
+        </button>
       </td>
     </tr>
   );

@@ -11,6 +11,22 @@ const ManageInventory = () => {
         setInventories(data);
       });
   }, []);
+  const handleDeleteItem = (id) => {
+    const proceed = window.confirm("Are you sure to delete");
+
+    if (proceed) {
+      fetch(`http://localhost:4001/inventory/${id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          const remainInventory = inventories.filter(
+            (inventory) => inventory._id !== id
+          );
+          setInventories(remainInventory);
+        });
+    }
+  };
   return (
     <div>
       <h3 className="text-center mt-5">All Inventories:{inventories.length}</h3>
@@ -33,6 +49,7 @@ const ManageInventory = () => {
               <ManageInventoryAll
                 key={inventory._id}
                 inventory={inventory}
+                handleDeleteItem={handleDeleteItem}
               ></ManageInventoryAll>
             ))}
           </tbody>
