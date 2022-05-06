@@ -7,6 +7,7 @@ import Login from "./component/Login/Login";
 import Register from "./component/Register/Register";
 import InventoryDetail from "./component/InventoryDetail/InventoryDetail";
 import ManageInventory from "./component/ManageInventory/ManageInventory";
+import AddNewItem from "./component/AddNewItem/AddNewItem";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           path="/manageinventory"
           element={<ManageInventory></ManageInventory>}
         ></Route>
+        <Route path="/addnewitem" element={<AddNewItem></AddNewItem>}></Route>
       </Routes>
     </div>
   );

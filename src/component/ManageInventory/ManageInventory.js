@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import ManageInventoryAll from "../ManageInventoryAll/ManageInventoryAll";
 
 const ManageInventory = () => {
@@ -55,6 +56,12 @@ const ManageInventory = () => {
           </tbody>
         </Table>
       </div>
+      <Link
+        className=" text-dark text-decoration-none text-center d-block "
+        to="/addnewitem"
+      >
+        <button className=" my-5 rounded w-25">Add New Item</button>
+      </Link>
     </div>
   );
 };
