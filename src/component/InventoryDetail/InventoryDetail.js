@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ManageInventoryButton from "../ManageInventoryButton/ManageInventoryButton";
+import RestockInventory from "../RestockInventory/RestockInventory";
 
 const InventoryDetail = () => {
   const { id } = useParams();
@@ -66,6 +67,7 @@ const InventoryDetail = () => {
           >
             Delivered
           </button>
+          <RestockInventory></RestockInventory>
         </div>
       </div>
       <ManageInventoryButton></ManageInventoryButton>
