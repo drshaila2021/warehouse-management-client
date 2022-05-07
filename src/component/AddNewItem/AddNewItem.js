@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const AddNewItem = () => {
   const [inventories, setInventories] = useState([]);
+  //   console.log(inventories);
   // useEffect(() => {
   //   fetch("http://localhost:4001/inventory")
   //     .then((res) => res.json())

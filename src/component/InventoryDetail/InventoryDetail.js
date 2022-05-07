@@ -22,7 +22,7 @@ const InventoryDetail = () => {
     picture,
   } = inventory;
   const handleDelivered = () => {
-    const quantity = inventory.quantity - 1;
+    const quantity = parseInt(inventory.quantity) - 1;
     const updatedQuantity = { quantity };
     fetch(`http://localhost:4001/inventory/${id}`, {
       method: "PUT",
@@ -33,7 +33,6 @@ const InventoryDetail = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        // setInventory.quantity(data);
         console.log("success", data);
         // window.location.reload(false);
       });
