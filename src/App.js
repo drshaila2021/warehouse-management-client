@@ -17,6 +17,7 @@ import AboutUs from "./component/AboutUs/AboutUs";
 import Footer from "./component/Footer/Footer";
 
 import MyItems from "./component/MyItems/MyItems";
+import Blogs from "./component/Blogs/Blogs";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/myitems" element={<MyItems></MyItems>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route
           path="/inventory/:id"
           element={
