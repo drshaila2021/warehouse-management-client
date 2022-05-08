@@ -3,8 +3,8 @@ import { Button } from "react-bootstrap";
 
 const OtherServices = () => {
   return (
-    <div>
-      <h2 className="text-success  text-center my-5 mt-5">Other Services!!</h2>
+    <div className="my-5">
+      <h2 className="text-secondary  text-center my-5 mt-5">Other Services</h2>
       <div className="row row-cols-1 row-cols-md-3 g-4 mx-5">
         <div className="col">
           <div className="card h-100">
@@ -16,7 +16,7 @@ const OtherServices = () => {
                 We have our own cargo and van for tranportation.We also provide
                 free delevery services in minimum purchase.
               </p>
-              <Button>Learn More</Button>
+              <Button className="bg-secondary">Learn More</Button>
             </div>
           </div>
         </div>
@@ -30,7 +30,7 @@ const OtherServices = () => {
                 We have our own team for set up your furniture in minimum
                 purchase.
               </p>
-              <Button>Learn More</Button>
+              <Button className="bg-secondary">Learn More</Button>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ const OtherServices = () => {
                 We provide furniture protection plan.we also provide 0% interest
                 rate in your monthly payment also.
               </p>
-              <Button>Learn More</Button>
+              <Button className="bg-secondary">Learn More</Button>
             </div>
           </div>
         </div>

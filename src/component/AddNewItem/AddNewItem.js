@@ -30,7 +30,7 @@ const AddNewItem = () => {
       description: event.target.description.value,
       user: user.email,
     };
-    fetch("http://localhost:4001/inventory", {
+    fetch("https://fast-chamber-69071.herokuapp.com/inventory", {
       method: "POST",
       headers: {
         "content-type": "application/json",

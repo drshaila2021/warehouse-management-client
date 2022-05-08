@@ -14,7 +14,6 @@ import RequreAuth from "./component/RequreAuth/RequreAuth";
 import NotFound from "./component/NotFound/NotFound";
 import OtherServices from "./component/OtherServices/OtherServices";
 import AboutUs from "./component/AboutUs/AboutUs";
-import Footer from "./component/Footer/Footer";
 
 import MyItems from "./component/MyItems/MyItems";
 import Blogs from "./component/Blogs/Blogs";
@@ -44,16 +43,12 @@ function App() {
         ></Route>
         <Route
           path="/manageinventory"
-          element={
-            <RequreAuth>
-              <ManageInventory></ManageInventory>
-            </RequreAuth>
-          }
+          element={<ManageInventory></ManageInventory>}
         ></Route>
         <Route path="/addnewitem" element={<AddNewItem></AddNewItem>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <Footer></Footer>
+
       <ToastContainer />
     </div>
   );

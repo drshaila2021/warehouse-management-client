@@ -14,7 +14,7 @@ const Home = () => {
       <ManageInventoryButton></ManageInventoryButton>
       <OtherServices></OtherServices>
       <AboutUs></AboutUs>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </div>
   );
 };

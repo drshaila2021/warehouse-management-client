@@ -6,7 +6,7 @@ import ManageInventoryAll from "../ManageInventoryAll/ManageInventoryAll";
 const ManageInventory = () => {
   const [inventories, setInventories] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4001/inventory")
+    fetch("https://fast-chamber-69071.herokuapp.com/inventory")
       .then((res) => res.json())
       .then((data) => {
         setInventories(data);
@@ -16,7 +16,7 @@ const ManageInventory = () => {
     const proceed = window.confirm("Are you sure to delete");
 
     if (proceed) {
-      fetch(`http://localhost:4001/inventory/${id}`, {
+      fetch(`https://fast-chamber-69071.herokuapp.com/inventory/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

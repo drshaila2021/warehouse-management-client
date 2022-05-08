@@ -4,7 +4,7 @@ import Inventory from "../Inventory/Inventory";
 const Inventories = () => {
   const [inventories, setInventories] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4001/inventory")
+    fetch("https://fast-chamber-69071.herokuapp.com/inventory")
       .then((res) => res.json())
       .then((data) => {
         setInventories(data);
@@ -12,7 +12,7 @@ const Inventories = () => {
   }, []);
   return (
     <div>
-      <h3 className="text-center my-5">Our Items..... </h3>
+      <h3 className="text-center my-5 text-secondary">Our Inventories </h3>
       <div className="row row-cols-1 row-cols-md-3 g-4 mx-auto">
         {inventories.slice(0, 6).map((inventory) => (
           <Inventory key={inventory._id} inventory={inventory}></Inventory>

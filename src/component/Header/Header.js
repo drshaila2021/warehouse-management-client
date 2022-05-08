@@ -29,15 +29,11 @@ const Header = () => {
               <Nav.Link as={Link} to="/about">
                 About Us
               </Nav.Link>
-              {user && (
-                <Nav.Link
-                  as={Link}
-                  to="manageinventory"
-                  href="#manageinventory"
-                >
-                  Manage Items
-                </Nav.Link>
-              )}
+
+              <Nav.Link as={Link} to="manageinventory" href="#manageinventory">
+                Manage Inventory
+              </Nav.Link>
+
               {user && (
                 <Nav.Link as={Link} to="/addnewitem" href="#addnewitem">
                   Add Items
@@ -62,9 +58,11 @@ const Header = () => {
                   Login
                 </Nav.Link>
               )}
-              <Nav.Link as={Link} to="/register">
-                Register
-              </Nav.Link>
+              {!user && (
+                <Nav.Link as={Link} to="/register">
+                  Register
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

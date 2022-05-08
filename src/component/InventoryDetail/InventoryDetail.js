@@ -7,7 +7,7 @@ const InventoryDetail = () => {
   const { id } = useParams();
   const [inventory, setInventory] = useState({});
   useEffect(() => {
-    fetch(`http://localhost:4001/inventory/${id}`)
+    fetch(`https://fast-chamber-69071.herokuapp.com/inventory/${id}`)
       .then((res) => res.json())
       .then((data) => setInventory(data));
   }, [id]);
@@ -24,7 +24,7 @@ const InventoryDetail = () => {
   const handleDelivered = () => {
     const quantity = parseInt(inventory.quantity) - 1;
     const updatedQuantity = { quantity };
-    fetch(`http://localhost:4001/inventory/${id}`, {
+    fetch(`https://fast-chamber-69071.herokuapp.com/inventory/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
