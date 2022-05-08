@@ -6,7 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 
 const Header = () => {
-  const [user1, loading1, error1] = useAuthState(auth);
+  const [user, loading, error] = useAuthState(auth);
   const navigate = useNavigate();
   const handleLogOut = () => {
     signOut(auth);
@@ -29,9 +29,28 @@ const Header = () => {
               <Nav.Link as={Link} to="/about">
                 About Us
               </Nav.Link>
+              {user && (
+                <Nav.Link
+                  as={Link}
+                  to="manageinventory"
+                  href="#manageinventory"
+                >
+                  Manage Items
+                </Nav.Link>
+              )}
+              {user && (
+                <Nav.Link as={Link} to="/addnewitem" href="#addnewitem">
+                  Add Items
+                </Nav.Link>
+              )}
+              {user && (
+                <Nav.Link as={Link} to="/myitems" href="#addnewitem">
+                  My Items
+                </Nav.Link>
+              )}
             </Nav>
             <Nav>
-              {user1 ? (
+              {user ? (
                 <button className="btn btn-transparent" onClick={handleLogOut}>
                   Logout
                 </button>

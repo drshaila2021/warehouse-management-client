@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
 
 const AddNewItem = () => {
   const [inventories, setInventories] = useState([]);
@@ -12,6 +14,7 @@ const AddNewItem = () => {
   //     });
   // }, []);
   const navigate = useNavigate();
+  const [user, loadind] = useAuthState(auth);
 
   // send data to server
   const handleSubmit = (event) => {
@@ -25,6 +28,7 @@ const AddNewItem = () => {
       itemSold: event.target.itemSold.value,
       supplierName: event.target.supplierName.value,
       description: event.target.description.value,
+      user: user.email,
     };
     fetch("http://localhost:4001/inventory", {
       method: "POST",

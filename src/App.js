@@ -16,6 +16,8 @@ import OtherServices from "./component/OtherServices/OtherServices";
 import AboutUs from "./component/AboutUs/AboutUs";
 import Footer from "./component/Footer/Footer";
 
+import MyItems from "./component/MyItems/MyItems";
+
 function App() {
   return (
     <div>
@@ -27,6 +29,7 @@ function App() {
           element={<OtherServices></OtherServices>}
         ></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
+        <Route path="/myitems" element={<MyItems></MyItems>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route
