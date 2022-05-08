@@ -70,14 +70,10 @@ const Register = () => {
         </button>
       </form>
       <div className="mx-auto d-block text-center border w-50 rounded shadow-sm">
-        <div className="mb-2 p-3">
-          {" "}
-          <button className="btn w-100 border">Sign Up with Google</button>
-        </div>
         <p>
           Already have an account ?
-          <Link to="/signin">
-            <button className="btn btn-secondary rounded ms-2"> Sign In</button>
+          <Link to="/login">
+            <button className="btn btn-secondary rounded ms-2"> Log In</button>
           </Link>
         </p>
       </div>

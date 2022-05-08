@@ -21,8 +21,8 @@ const Login = () => {
     useSignInWithGoogle(auth);
   const [user1, loading1, error1] = useAuthState(auth);
   const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
+  //const location = useLocation();
+  //const from = location.state?.from?.pathname || "/";
 
   const handleEmailBlur = (event) => {
     setEmail(event.target.value);
@@ -37,6 +37,11 @@ const Login = () => {
     console.log(email, password);
     // console.log(error, error1);
   };
+  if (user1) {
+    console.log(user1);
+    navigate("/");
+    //navigate(from, { replace: true });
+  }
   if (loading1) {
     return <Loading></Loading>;
   }
@@ -48,10 +53,6 @@ const Login = () => {
         {error?.message} {error2?.message}
       </p>
     );
-  }
-  if (user1) {
-    // navigate("/");
-    navigate(from, { replace: true });
   }
 
   const resetPassword = async () => {
@@ -66,7 +67,7 @@ const Login = () => {
   return (
     <div className="w-50 mx-auto d-block my-5 border p-5 rounded-4 shadow-sm bg-body ">
       <form onSubmit={handleSubmit}>
-        <h4 className="text-center text-secondary">Sign In</h4>
+        <h4 className="text-center text-secondary">Log In</h4>
 
         <div className="mb-3">
           <input
@@ -112,8 +113,8 @@ const Login = () => {
       </p>
       <p className="text-center">
         New User ? Please click
-        <Link className="ms-2 text-decoration-none" to="/signup">
-          Sign Up
+        <Link className="ms-2 text-decoration-none" to="/register">
+          Register
         </Link>
       </p>
 
@@ -124,7 +125,7 @@ const Login = () => {
             onClick={() => signInWithaGoogle()}
             className="btn w-100 border"
           >
-            Sign in with <img src={logo} alt="" />
+            Log in with <img src={logo} alt="" />
             oogle
           </button>
         </div>
